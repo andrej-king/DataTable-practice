@@ -1,6 +1,6 @@
 $(document).ready(function () {
 	$.ajax({
-		url: "http://localhost:3000/api/specialists",
+		url: window.location.href + "api/specialists",
 		type: "post",
 		success: function (data) {
 			$('#tableWithSpecialists').DataTable({
