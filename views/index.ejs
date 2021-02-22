@@ -1,0 +1,87 @@
+<%- include('includes/header.ejs') %>
+</head>
+<body>
+<div class="container">
+    <div class="title-container">
+        <h1>The best specialists of the year</h1>
+    </div>
+
+    <div class="table-container">
+        <table id="tableWithSpecialists" class="display" style="width:100%">
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tfoot>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+                <th>Office</th>
+                <th>Age</th>
+                <th>Start date</th>
+                <th>Salary</th>
+            </tr>
+            </tfoot>
+        </table>
+    </div>
+
+    <div class="my-3">
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addSpecialistModal">
+            Add specialist
+        </button>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="addSpecialistModal" tabindex="-1" aria-labelledby="addSpecialistModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addSpecialistModalLabel">Add specialists of the year</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="/" method="post">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="position">Position</label>
+                        <input type="text" class="form-control" name="position" id="position" placeholder="Enter position" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="office">Office</label>
+                        <input type="text" class="form-control" name="office" id="office" placeholder="Office location" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="age">Age</label>
+                        <input type="number" class="form-control hide-arrows" name="age" id="age" placeholder="Specialist age" required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start of work</label>
+                        <input type="date" class="form-control" name="startDate" id="startDate" placeholder="Start of work of a specialist" required="required" pattern="\d{2}-\d{2}-\d{4}">
+                    </div>
+                    <div class="form-group">
+                        <label for="salary">Salary</label>
+                        <input type="text" class="form-control" name="salary" id="salary" placeholder="Salary" required="required">
+                    </div>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('includes/footer.ejs') %>
