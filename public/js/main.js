@@ -9,7 +9,7 @@ $(document).ready(function () {
 					{title: "Name"},
 					{title: "Position"},
 					{title: "Office"},
-					{title: "Extn."},
+					{title: "Age"},
 					{title: "Start date"},
 					{title: "Salary"}
 				]
